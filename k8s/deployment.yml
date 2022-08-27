@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test
+spec:
+  selector:
+    matchLabels:
+      app: test
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: test
+    spec:
+      containers:
+        - name: test
+          image: test
+          imagePullPolicy: Never
+          env:
+            - name: NAME
+              value: 'testAbc123'
+          ports:
+            - containerPort: 3000
