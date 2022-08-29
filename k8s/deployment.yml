@@ -19,6 +19,8 @@ spec:
           env:
             - name: NAME
               value: 'testAbc123'
+            - name: DB_HOST
+              value: 10.1.0.59
           ports:
             - containerPort: 3000
 ---

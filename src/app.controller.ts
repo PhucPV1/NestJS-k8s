@@ -9,4 +9,14 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('db')
+  async getDb(): Promise<any> {
+    return this.appService.getDb();
+  }
+
+  @Get('create')
+  async getDb2(): Promise<any> {
+    return this.appService.create();
+  }
 }
