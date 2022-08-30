@@ -21,9 +21,9 @@ spec:
             - name: NAME
               value: 'testAbc123'
             - name: DB_HOST
-              value: 10.1.0.194
+              value: 10.1.0.209
           ports:
-            - containerPort: 80
+            - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
@@ -36,4 +36,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
+      targetPort: 3000
   type: LoadBalancer
