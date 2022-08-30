@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Example } from './entities/Example.entity';
+import { ScheduleModule } from '@nestjs/schedule';
+import { TasksService } from './cron';
 
 @Module({
   imports: [
@@ -20,8 +22,9 @@ import { Example } from './entities/Example.entity';
     }),
     TypeOrmModule.forFeature([Example]),
     ConfigModule.forRoot(),
+    ScheduleModule.forRoot(),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, TasksService],
 })
 export class AppModule {}

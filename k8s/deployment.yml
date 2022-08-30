@@ -2,11 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: test
+  namespace: test
 spec:
   selector:
     matchLabels:
       app: test
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -20,18 +21,19 @@ spec:
             - name: NAME
               value: 'testAbc123'
             - name: DB_HOST
-              value: 10.10.10.99
+              value: 10.1.0.194
           ports:
-            - containerPort: 3000
+            - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: test
+  namespace: test
 spec:
   selector:
     app: test
   ports:
     - protocol: TCP
-      port: 3000
+      port: 80
   type: LoadBalancer
