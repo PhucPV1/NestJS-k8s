@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: test
-  namespace: test
+  namespace: deploy
 spec:
   selector:
     matchLabels:
@@ -21,7 +21,7 @@ spec:
             - name: NAME
               value: 'testAbc123'
             - name: DB_HOST
-              value: 10.1.0.209
+              value: 10.1.1.1
           ports:
             - containerPort: 3000
 ---
@@ -29,7 +29,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: test
-  namespace: test
+  namespace: deploy
 spec:
   selector:
     app: test
@@ -37,4 +37,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 3000
-  type: LoadBalancer
+      nodePort: 30001
+  type: NodePort
