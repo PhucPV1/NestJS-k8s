@@ -21,7 +21,7 @@ spec:
             - name: NAME
               value: 'testAbc123'
             - name: DB_HOST
-              value: 10.1.1.1
+              value: 10.0.0.0
           ports:
             - containerPort: 3000
 ---

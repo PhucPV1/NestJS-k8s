@@ -69,6 +69,8 @@ spec:
   ports:
     - port: 5432 # Sets the port to run the postgres application
       targetPort: 5432
+  externalIPs:
+    - 10.0.0.0
   selector:
     app: postgres
 # ---
