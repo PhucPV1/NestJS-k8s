@@ -7,3 +7,4 @@ Clean up and next steps
 
 kubectl -n kubernetes-dashboard delete serviceaccount admin-user
 kubectl -n kubernetes-dashboard delete clusterrolebinding admin-user
+kubectl delete -f common/crds/
