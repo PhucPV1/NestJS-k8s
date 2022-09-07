@@ -15,8 +15,8 @@ spec:
     spec:
       containers:
         - name: test
-          image: test
-          imagePullPolicy: Never
+          image: phucv2/k8s
+          imagePullPolicy: IfNotPresent
           env:
             - name: NAME
               value: 'testAbc123'
