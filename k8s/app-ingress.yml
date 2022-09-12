@@ -7,10 +7,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - localhost
+        - app.com
       secretName: default-server-secret
   rules:
-    - host: localhost
+    - host: app.com
       http:
         paths:
           - path: /api
