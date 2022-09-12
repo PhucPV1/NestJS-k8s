@@ -3,12 +3,15 @@ kind: Ingress
 metadata:
   name: app-ingress
   namespace: deploy
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    # cert-manager.io/cluster-issuer: selfsigned
 spec:
-  ingressClassName: nginx
   tls:
     - hosts:
         - app.com
-      secretName: default-server-secret
+      # secretName: default-server-secret
+      secretName: example-app-tls
   rules:
     - host: app.com
       http:
