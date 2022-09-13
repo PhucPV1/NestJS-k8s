@@ -4,8 +4,9 @@ metadata:
   name: letsencrypt-cluster-issuer
 spec:
   acme:
-    server: https://acme-v02.api.letsencrypt.org/directory
-    email: your-email@email.com
+    # server: https://acme-v02.api.letsencrypt.org/directory
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    email: phucv172@gmail.com
     privateKeySecretRef:
       name: letsencrypt-cluster-issuer-key
     solvers:
