@@ -5,14 +5,14 @@ metadata:
   namespace: deploy
   annotations:
     kubernetes.io/ingress.class: nginx
-    # cert-manager.io/cluster-issuer: selfsigned
+    cert-manager.io/cluster-issuer: letsencrypt-cluster-issuer
 spec:
   ingressClassName: nginx
   tls:
     - hosts:
         - app.com
-      secretName: default-server-secret
-      # secretName: example-app-tls
+      # secretName: default-server-secret
+      secretName: example-app-tls
   rules:
     - host: app.com
       http:
