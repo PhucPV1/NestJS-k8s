@@ -11,8 +11,8 @@ spec:
   tls:
     - hosts:
         - app.com
-      # secretName: default-server-secret
-      secretName: example-app-tls
+      secretName: default-server-secret
+      # secretName: example-app-tls
   rules:
     - host: app.com
       http:
