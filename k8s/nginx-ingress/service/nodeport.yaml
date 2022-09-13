@@ -4,6 +4,7 @@ metadata:
   name: nginx-ingress
   namespace: deploy
 spec:
+  externalTrafficPolicy: Local
   type: LoadBalancer
   ports:
     - port: 80
