@@ -5163,6 +5163,10 @@ metadata:
     app.kubernetes.io/component: "cainjector"
     app.kubernetes.io/version: "v1.9.1"
 spec:
+  hostAliases:
+      - hostnames:
+        - app.com
+        ip: 192.168.1.127 # replace with the ip of a node on the cluster
   replicas: 1
   selector:
     matchLabels:
