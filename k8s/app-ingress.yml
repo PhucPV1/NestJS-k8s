@@ -4,18 +4,18 @@ metadata:
   name: app-ingress
   namespace: deploy
   annotations:
-    kubernetes.io/ingress.class: nginx
+    # kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-cluster-issuer
     acme.cert-manager.io/http01-edit-in-place: 'true'
 spec:
-  # ingressClassName: nginx
+  ingressClassName: nginx
   tls:
     - hosts:
-        - app.com
+        - www.app.com
       # secretName: default-server-secret
       secretName: example-app-tls
   rules:
-    - host: app.com
+    - host: www.app.com
       http:
         paths:
           - path: /api
