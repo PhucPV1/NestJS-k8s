@@ -20,3 +20,5 @@ src: https://docs.nginx.com/nginx-ingress-controller/installation/installation-w
 kubectl delete clusterrole nginx-ingress
 kubectl delete clusterrolebinding nginx-ingress
 kubectl delete -f common/crds/
+
+envsubst < <(cat *.yaml) | kubectl apply -f -
