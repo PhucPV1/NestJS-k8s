@@ -1,3 +1,9 @@
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.9.1/cert-manager.yaml
+or
+kubectl apply -f cert-manager.yaml
+
+kubectl apply -f issuer.yml
+kubectl apply -f certificate.yml
+
 
 kubectl delete all --all -n cert-manager
