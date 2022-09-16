@@ -16,6 +16,6 @@ spec:
       protocol: TCP
       name: https
   externalIPs:
-    - 192.168.1.127
+    - $HOST
   selector:
     app: nginx-ingress
