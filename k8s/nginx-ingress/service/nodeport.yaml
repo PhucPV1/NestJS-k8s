@@ -15,7 +15,7 @@ spec:
       targetPort: 443
       protocol: TCP
       name: https
-  # externalIPs:
-  #   - $HOST
+  externalIPs:
+    - $HOST
   selector:
     app: nginx-ingress
