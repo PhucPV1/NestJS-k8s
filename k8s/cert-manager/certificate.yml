@@ -5,7 +5,7 @@ metadata:
   namespace: deploy
 spec:
   dnsNames:
-    - app.com
+    - $DOMAIN
   secretName: example-app-tls
   issuerRef:
     name: letsencrypt-cluster-issuer
