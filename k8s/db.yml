@@ -11,7 +11,7 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 2Gi # Sets PVC's size
+      storage: 1Gi # Sets PVC's size
 ---
 apiVersion: v1
 kind: ConfigMap
