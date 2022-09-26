@@ -13,11 +13,11 @@ spec:
   # ingressClassName: nginx
   tls:
     - hosts:
-        - vanphucsite.tk
-      # secretName: default-server-secret
-      secretName: example-app-tls
+        - $DOMAIN
+      secretName: default-server-secret
+      # secretName: example-app-tls
   rules:
-    - host: vanphucsite.tk
+    - host: $DOMAIN
       http:
         paths:
           - path: /api
